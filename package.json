@@ -1,0 +1,32 @@
+{
+  "name": "Mountain",
+  "version": "1.0.0",
+  "description": "Alpinejs project",
+  "main": "index.js",
+  "author": "james-burgess",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "serve": "webpack serve --mode=development"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "sass": "^1.36.0",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.46.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.16.1",
+    "alpinejs": "^3.2.2",
+    "bulma": "^0.9.3",
+    "lodash": "^4.17.21",
+    "navigo": "^8.11.1",
+    "style-loader": "^3.2.1"
+  }
+}
