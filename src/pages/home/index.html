@@ -1,0 +1,13 @@
+<section x-data="user" x-bind:class="authenticated ? 'hero is-success' : 'hero is-danger'">
+    <div class="hero-body">
+        <p class="title" x-text="authenticated ? 'You are authenticated' : 'You are not logged into the website'">
+        </p>
+        <a x-bind:href="authenticated ? '/about' : '/login'" data-navigo>
+        <button x-bind:class="authenticated ? 'is-success' : 'is-danger'" class="button is-light" x-text="authenticated ? 'Dashboard' : 'Login'">Dashboard</button>
+        </a>
+
+        <button x-show="authenticated" class="button is-light" x-on:click="logout">
+            Logout
+        </button>
+    </div>
+</section>
