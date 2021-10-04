@@ -1,10 +1,13 @@
 var path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     experiments: {
         topLevelAwait: true,
     },
-
+    plugins: [
+        new Dotenv(),
+    ],
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
