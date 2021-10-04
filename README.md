@@ -8,7 +8,8 @@ _An apline.js project template with all the normal goodies:_
 - Bulma css for sweet styles
 
 
-# Running
+# Running locally
 
+- Populate a `.env` file in the root of the app (use `.env.sample` for help)
 - `$ yarn install`
 - `$ yarn serve`
