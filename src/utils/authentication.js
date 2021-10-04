@@ -11,16 +11,17 @@ const loginWithAuth = () => {
         redirect_uri: window.location.origin + '/login'
     }).then(token => {
         auth0.getUser().then(user => {
-            console.log(user);
+            console.log(user, token);
         });
     });
 }
 
 export default function user() {
+    const authOn = process.env.AUTH_ENABLED === 1
     return {
-        authenticated: window.localStorage.getItem('jwt_token'),
+        authenticated: authOn ? window.localStorage.getItem('jwt_token') : true,
         login() {
-            loginWithAuth()
+            authOn ? loginWithAuth() : router.resolve('/')
         },
         logout() {
             window.localStorage.removeItem('jwt_token')
