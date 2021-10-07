@@ -1,5 +1,5 @@
 {
-  "name": "Mountain",
+  "name": "mountain",
   "version": "1.0.0",
   "description": "Alpinejs project",
   "main": "index.js",
@@ -25,7 +25,6 @@
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.16.1",
     "alpinejs": "^3.2.2",
-    "bulma": "^0.9.3",
     "lodash": "^4.17.21",
     "navigo": "^8.11.1",
     "style-loader": "^3.2.1"

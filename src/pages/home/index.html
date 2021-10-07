@@ -1,13 +1,26 @@
-<section x-data="user" x-bind:class="authenticated ? 'hero is-success' : 'hero is-danger'">
-    <div class="hero-body">
-        <p class="title" x-text="authenticated ? 'You are authenticated' : 'You are not logged into the website'">
-        </p>
-        <a x-bind:href="authenticated ? '/about' : '/login'" data-navigo>
-        <button x-bind:class="authenticated ? 'is-success' : 'is-danger'" class="button is-light" x-text="authenticated ? 'Dashboard' : 'Login'">Dashboard</button>
-        </a>
+<sl-alert x-data="user" x-bind:type="authenticated ? 'success' : 'warning'" open>
+    <sl-icon slot="icon" name="check2-circle"></sl-icon>
+    <strong x-text="authenticated ? 'You are authenticated' : 'You are not logged into the website'"></strong><br>
+    <sl-button size="small" x-show="authenticated" x-on:click="logout" type="neutral">Logout</sl-button>
+    <a href="/login" x-show="!authenticated" data-navigo><sl-button size="small" x-on:click="logout" type="success">Login</sl-button></a>
+</sl-alert>
 
-        <button x-show="authenticated" class="button is-light" x-on:click="logout">
-            Logout
-        </button>
-    </div>
-</section>
+
+
+<div class="welcome">
+<h1>Welcome to mountain!</h1>
+    <p>
+        A javascript framework based on alpine.js with some extra features to make it a bit easier to use.
+    </p>
+    <ul>
+        <li>Webpack to bundle your shit</li>
+        <li>Navigo to route to pages</li>
+        <li>Auth0 to secure your connection</li>
+        <li>Shoelace to style your components</li>
+        <li>PostCSS so you can write scss</li>
+    </ul>
+</div>
+
+<div>
+    Authenticated users can view the <a href="/about">about page</a>
+</div>
