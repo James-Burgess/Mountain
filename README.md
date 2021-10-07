@@ -5,7 +5,7 @@ _An apline.js project template with all the normal goodies:_
 - Navigo to route pages
 - Postcss so we can write nice scss. 
 - Auth0 to handle authentication
-- Bulma css for sweet styles
+- shoelace for sweet styles
 
 # Obtaining auth0 credentials
 
